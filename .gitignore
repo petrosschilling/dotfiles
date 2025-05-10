@@ -1,0 +1,12 @@
+# Ignore everything
+*
+
+# Except the following files
+!.zprofile
+!.zshrc
+!.config/**/**/**
+!.*
+
+# Extras
+.DS_Store
+.docker/
