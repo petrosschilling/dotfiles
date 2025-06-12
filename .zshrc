@@ -1,4 +1,5 @@
 export CLICOLOR=1
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 alias redis=/opt/homebrew/opt/redis/bin/redis-server /opt/homebrew/etc/redis.conf
 

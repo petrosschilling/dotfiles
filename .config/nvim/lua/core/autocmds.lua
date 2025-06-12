@@ -1,4 +1,4 @@
--- Auto-reload Lua config on save
+  -- Auto-reload Lua config on save
 vim.api.nvim_create_autocmd("BufWritePost", {
   pattern = "*/.config/nvim/lua/**/*.lua",
   callback = function(args)

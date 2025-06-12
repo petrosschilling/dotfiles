@@ -28,5 +28,6 @@ vim.opt.listchars = {
 vim.opt.wrap = false -- Disable line wrapping
 vim.opt.cursorline = true -- Highlight the current line
 vim.opt.termguicolors = true -- Enable true color support (recommended for themes)
-vim.opt.scrolloff = 999 -- Keeps cursor vertically centered:q
-
+vim.opt.scrolloff = 999 -- Keeps cursor vertically centered
+vim.opt.splitbelow = true -- Horizontal splits go below
+vim.opt.splitright = true -- Vertical splits go right

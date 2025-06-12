@@ -6,7 +6,7 @@ local config = wezterm.config_builder()
 -- Font settings
 config.font_size = 14
 config.line_height = 1.2
-config.font = wezterm.font("MesloLGS NF")
+config.font = wezterm.font("DankMono Nerd Font")
 
 -- Colors
 config.color_scheme = "Pnevma"
