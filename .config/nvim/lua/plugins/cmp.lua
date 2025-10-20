@@ -1,6 +1,7 @@
 local function config()
   local cmp = require("cmp")
   local luasnip = require("luasnip")
+  local lspkind = require("lspkind")
 
   require("luasnip.loaders.from_vscode").lazy_load()
 
@@ -37,6 +38,16 @@ local function config()
       { name = "luasnip" },
       { name = "buffer" },
       { name = "path" },
+    },
+    formatting = {
+      format = function(entry, vim_item)
+        local lspkind = require('lspkind')
+        local kind_icon = lspkind.presets.default[vim_item.kind] or ''
+        vim_item.abbr = kind_icon .. '  ' .. vim_item.abbr
+        vim_item.kind = ""
+        vim_item.menu = ""
+        return vim_item
+      end,
     },
   })
 end

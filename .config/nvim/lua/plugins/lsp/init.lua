@@ -9,6 +9,8 @@ local function config()
       "lua_ls",
       "ts_ls",
       "pyright",
+      "rust_analyzer",
+      "glsl_analyzer",
     },
   })
 
@@ -22,12 +24,15 @@ local function config()
   local lsp_lua = require("plugins.lsp.lua")
   lsp_lua.setup(lspconfig, capabilities)
 
+  local lsp_rust = require("plugins.lsp.rust")
+  lsp_rust.setup(lspconfig, capabilities)
+
   local keymaps = require("plugins.lsp.keymaps")
 
   -- Setup other LSP servers
   mason_lspconfig.setup_handlers({
     function(server_name)
-      if server_name ~= "lua_ls" and server_name ~= "pyright" then
+      if server_name ~= "lua_ls" and server_name ~= "pyright" and server_name ~= "rust_analyzer" then
         lspconfig[server_name].setup({
           capabilities = capabilities,
           on_attach = keymaps.setup,

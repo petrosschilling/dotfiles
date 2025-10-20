@@ -33,7 +33,7 @@ local function config()
       },
     },
     view = {
-      side = "left",
+      side = "right",
     },
     renderer = {
       highlight_git = true,

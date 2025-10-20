@@ -28,8 +28,12 @@ require("lazy").setup({
   require("plugins.cmp"),
   require("plugins.conform"),
   require("plugins.mason-conform"),
+  { "onsails/lspkind.nvim" },
   { "christoomey/vim-tmux-navigator" },
   { "nvim-tree/nvim-web-devicons" },
 })
 
 require("plugins.lsp")
+
+-- remove the italics for god sake
+vim.cmd("highlight Keyword cterm=NONE gui=NONE")
